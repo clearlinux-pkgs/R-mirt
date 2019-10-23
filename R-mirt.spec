@@ -4,7 +4,7 @@
 #
 Name     : R-mirt
 Version  : 1.31
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/mirt_1.31.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mirt_1.31.tar.gz
 Summary  : Multidimensional Item Response Theory
@@ -14,14 +14,17 @@ Requires: R-mirt-lib = %{version}-%{release}
 Requires: R-Deriv
 Requires: R-GPArotation
 Requires: R-Rcpp
+Requires: R-RcppArmadillo
 Requires: R-dcurver
 Requires: R-vegan
 BuildRequires : R-Deriv
 BuildRequires : R-GPArotation
 BuildRequires : R-Rcpp
+BuildRequires : R-RcppArmadillo
 BuildRequires : R-dcurver
 BuildRequires : R-vegan
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 [![Travis-CI Build Status](https://travis-ci.org/philchalmers/mirt.svg?branch=master)](https://travis-ci.org/philchalmers/mirt) [![](http://www.r-pkg.org/badges/version/mirt)](http://www.r-pkg.org/pkg/mirt) [![](http://cranlogs.r-pkg.org/badges/grand-total/mirt)](https://CRAN.R-project.org/package=mirt)
@@ -42,10 +45,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568910704
+export SOURCE_DATE_EPOCH=1571866344
 
 %install
-export SOURCE_DATE_EPOCH=1568910704
+export SOURCE_DATE_EPOCH=1571866344
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
