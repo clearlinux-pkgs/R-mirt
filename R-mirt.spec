@@ -4,7 +4,7 @@
 #
 Name     : R-mirt
 Version  : 1.32.1
-Release  : 12
+Release  : 13
 URL      : https://cran.r-project.org/src/contrib/mirt_1.32.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mirt_1.32.1.tar.gz
 Summary  : Multidimensional Item Response Theory
@@ -26,7 +26,7 @@ BuildRequires : R-vegan
 BuildRequires : buildreq-R
 
 %description
-[![Travis-CI Build Status](https://travis-ci.org/philchalmers/mirt.svg?branch=master)](https://travis-ci.org/philchalmers/mirt) [![](http://www.r-pkg.org/badges/version/mirt)](http://www.r-pkg.org/pkg/mirt) [![](http://cranlogs.r-pkg.org/badges/grand-total/mirt)](https://CRAN.R-project.org/package=mirt)
+unidimensional and multidimensional latent trait models under the Item
 
 %package lib
 Summary: lib components for the R-mirt package.
@@ -38,21 +38,22 @@ lib components for the R-mirt package.
 
 %prep
 %setup -q -c -n mirt
+cd %{_builddir}/mirt
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1587864842
+export SOURCE_DATE_EPOCH=1589586463
 
 %install
-export SOURCE_DATE_EPOCH=1587864842
+export SOURCE_DATE_EPOCH=1589586463
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
