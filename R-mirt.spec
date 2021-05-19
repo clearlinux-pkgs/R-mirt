@@ -4,7 +4,7 @@
 #
 Name     : R-mirt
 Version  : 1.33.2
-Release  : 19
+Release  : 20
 URL      : https://cran.r-project.org/src/contrib/mirt_1.33.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mirt_1.33.2.tar.gz
 Summary  : Multidimensional Item Response Theory
